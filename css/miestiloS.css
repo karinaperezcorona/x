@@ -1,0 +1,321 @@
+/*Recurso para usar una tipografia descargada*/
+
+@font-face {
+    font-family: 'OpenDescargada';
+    src: url('../Fonts/OpenSans-Regular.ttf') format('woff2');
+}
+
+/*Variables css*/
+:root{
+    --color_principal:#004b87;
+    --color_secundario:#00a859;
+    --color_obscuro:#2b2b2b;
+    --color_claro:#fff;
+    --color_fondo:#f4f7f6;
+    --color_borde:#e0e0e0;
+    
+    --fuente_titulos:'Montserrat';
+    --fuente_cuerpo:'Montserrat';
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f4f7f6;
+    color: var(--color_obscuro);
+    line-height: 1.6;
+    font-family: 'Montserrat';
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-family: var(--fuente_titulos);
+}
+header{
+    display:flex; /*Default flex-direction:row*/
+    background-color: var(--color_claro);
+    justify-content: space-between;
+    align-items:center;
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.5);
+    /*Poner el menu pegado*/
+    top:0;
+    position: sticky;
+    z-index: 1000;
+    padding: 15px 50px;
+}
+nav{
+    display:flex;
+}
+nav ul{
+    display:flex;
+    gap: 20px;
+    align-items:center;
+}
+
+nav a{
+    font-size: 0.95rem;
+    font-weight: 600;
+    color:inherit;
+}
+nav a:hover{
+    /*Aqui tengo que regresar*/
+    color:var(--color_principal);
+}
+#logo h1{
+    color:var(--color_principal);
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+h1, h2, h3{
+    font-family: var(--fuente_titulos) ;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+}
+
+#btn_destacado, #btn_accion{
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700px;
+}
+#btn_destacado{
+    background-color: var(--color_principal);
+    color:var(--color_claro);
+}
+#btn_accion{
+    background-color: var(--color_secundario);
+    color:var(--color_claro);
+}
+#btn_accion:hover{
+    background-color: var(--color_principal);
+    color:var(--color_claro);
+}
+
+#btn_destacado:hover{
+color:var(--color_secundario);
+}
+
+.contenedorPrincipal{
+    
+    max-width: 1200px;
+    margin:0 auto;
+    padding:20px;
+}
+
+.tec{
+    display:flex;
+    align-items: center;
+    gap:40px;
+    padding:60px 0;
+}
+.tec_Contenido, .image{
+    flex: 1 1 300px;
+
+}
+
+.tec_Contenido h2{
+    font-size: 2.5rem;
+    color:var(--color_principal);
+    line-height: 1.2;
+}
+.tec_Contenido p{
+    font-size: 1.5rem;
+    margin-bottom:20px;
+}
+.imagenes img{width: 80%;}
+
+
+/* Grind de cursos*/
+#catalogo{
+    padding: 40px 0;
+
+}
+#catalogo h2{
+    text-align:center;
+    color:var(--color_principal);
+}
+.grid_cursos{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.tarjeta_curso{
+    background-color:var(--color_claro);
+    border: 10px solid var(--color_borde);
+    border-radius: 8px;
+    flex: 1 1 280px;
+    max-width: 350px;
+    display:flex;
+    flex-direction:column;
+    /*efecto*/
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.tarjeta_curso:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08)
+}
+.tarjeta_curso img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+}
+.info_curso{
+    padding:20px;
+    flex-grow:1;
+    flex-direction:column;
+}
+.info_curso h3{
+    font-size:1.3rem;
+    color: var(--color_principal);
+}
+.info_curso p{
+    margin-bottom: 15px;
+    flex-grow:1;
+    color:var(--color_obscuro);
+}
+.nivel{
+    background-color: var(--color_fondo);
+    color:var(--color_principal);
+    font-family: var(--fuente_titulo);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight:700;
+    text-transform:uppercase;
+    align-self: flex-start;
+}
+/*Footer*/
+footer{
+    background-color:var(--color_obscuro);
+
+    color:var(--color_claro);
+    text-align:center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 50px;
+    border-top: 5px solid #004b8d; /* Barra superior azul */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); /* Sombra suave inferior */
+}
+
+
+
+/* --- CONTENEDOR PRINCIPAL Y FORMULARIO --- */
+.contenedorPrincipal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.seccion_formulario {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 520px;
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.encabezado_form h2 {
+    color: #004b8d;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.encabezado_form p {
+    color: #666666;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.form_inscripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.grupo_campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.grupo_campo label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333333;
+}
+
+.grupo_campo input,
+.grupo_campo select {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grupo_campo input:focus,
+.grupo_campo select:focus {
+    border-color: #004b8d;
+    box-shadow: 0 0 5px rgba(0, 75, 141, 0.2);
+}
+
+/* Botón de envío */
+.form_inscripcion button#btn_accion {
+    margin-top: 10px;
+    background-color: #004b8d;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form_inscripcion button#btn_accion:hover {
+    background-color: #003366;
+}
+
